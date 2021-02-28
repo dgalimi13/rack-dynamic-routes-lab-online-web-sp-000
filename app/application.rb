@@ -17,8 +17,8 @@ class Application
     item = @@items.find{|item| item.name == item_name}
     if item  
       resp.write item.price
-      elsif
-      !item
+    else
+    
     resp.write "Item not found"
     resp.status = 400
     end
