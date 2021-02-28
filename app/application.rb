@@ -12,6 +12,7 @@ class Application
       resp.write "Route not found"
       resp.status = 404
     
+    elsif 
     req.path.match("/items/")
     item_name = req.path.split("/items/").last
     item = @@items.find{|item| item.name == item_name}
@@ -21,10 +22,6 @@ class Application
       !item
     resp.write "Item not found"
     resp.status = 400
-    
-    
-    elsif 
-    
     end
   end 
  
